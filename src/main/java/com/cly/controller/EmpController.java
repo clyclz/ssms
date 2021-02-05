@@ -24,31 +24,12 @@ public class EmpController {
 
     @RequestMapping("/shows")
     public String demos(){
-        System.out.println("xxxxxxxxxxxxxxxxxxx");
-        System.out.println("ilikeyou");
 
         System.out.println("张天龙");
 
-        return "index";
-    }
-    @RequestMapping("/rrssssrrs")
-    public String desmssos(){
-        System.out.println("xxxxxxxxxxxxxxxxxxx");
-
-
-        System.out.println("张天龙");
+        System.out.println("张龙是一个好人");
 
         return "index";
     }
 
-
-    @RequestMapping("/ssrs")
-    public String desssssmssos(){
-        System.out.println("lis");
-
-
-        System.out.println("张天龙");
-
-        return "index";
-    }
 }
