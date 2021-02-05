@@ -26,6 +26,18 @@ public class EmpController {
     public String demos(){
         System.out.println("xxxxxxxxxxxxxxxxxxx");
         System.out.println("ilikeyou");
+
+        System.out.println("张天龙");
+
+        return "index";
+    }
+    @RequestMapping("/rrssssrrs")
+    public String desmssos(){
+        System.out.println("xxxxxxxxxxxxxxxxxxx");
+
+
+        System.out.println("张天龙");
+
         return "index";
     }
 }
