@@ -21,4 +21,8 @@ public class EmpController {
         }
         return "index";
     }
+    @RequestMapping("/sh")
+    public String dd(){
+        return "ss";
+    }
 }
