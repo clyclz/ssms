@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cly.dao.EmpDao">
+    <insert id="addEmp" parameterType="emp">
+     insert into Emp(emp_name,emp_gender,emp_email,did) values(#{emp_name},#{emp_gender},#{emp_email},#{did})
+ </insert>
+
+    <select id="getAll" resultType="emp">
+        select *from emp
+    </select>
+</mapper>
