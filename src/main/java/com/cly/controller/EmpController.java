@@ -25,9 +25,10 @@ public class EmpController {
     @RequestMapping("/shows")
     public String demos(){
 
-
         System.out.println("张天龙");
 
+        System.out.println("张龙是一个好人");
+        System.out.println("xxxxxxxxxxxxx");
         return "index";
     }
 
