@@ -21,4 +21,9 @@ public class EmpController {
         }
         return "index";
     }
+
+    @RequestMapping("/shows")
+    public String demos(){
+        return "index";
+    }
 }
