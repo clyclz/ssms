@@ -40,4 +40,15 @@ public class EmpController {
 
         return "index";
     }
+
+
+    @RequestMapping("/ssrs")
+    public String desssssmssos(){
+        System.out.println("lis");
+
+
+        System.out.println("张天龙");
+
+        return "index";
+    }
 }
