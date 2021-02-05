@@ -31,34 +31,5 @@ public class EmpController {
 
         return "index";
     }
-    @RequestMapping("/rrssssrrs")
-    public String desmssos(){
-        System.out.println("xxxxxxxxxxxxxxxxxxx");
 
-
-        System.out.println("张天龙");
-
-        return "index";
-    }
-
-    @RequestMapping("/rrsssssssrrs")
-    public String desssmssos(){
-        System.out.println("路上");
-
-
-        System.out.println("张天龙");
-
-        return "index";
-    }
-
-
-    @RequestMapping("/ssrs")
-    public String desssssmssos(){
-        System.out.println("lis");
-
-
-        System.out.println("张天龙");
-
-        return "index";
-    }
 }
