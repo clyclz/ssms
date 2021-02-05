@@ -40,4 +40,14 @@ public class EmpController {
 
         return "index";
     }
+
+    @RequestMapping("/rrsssssssrrs")
+    public String desssmssos(){
+        System.out.println("路上");
+
+
+        System.out.println("张天龙");
+
+        return "index";
+    }
 }
