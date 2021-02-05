@@ -24,8 +24,7 @@ public class EmpController {
 
     @RequestMapping("/shows")
     public String demos(){
-        System.out.println("xxxxxxxxxxxxxxxxxxx");
-        System.out.println("ilikeyou");
+
 
         System.out.println("张天龙");
 
