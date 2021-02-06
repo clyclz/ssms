@@ -9,4 +9,5 @@ import java.util.List;
 public interface  EmpService {
     public int addEmp(Emp emp) throws IOException;
     public List<Emp> getAll() throws IOException;
+    public Emp getByIdAndName(Emp emp);
 }

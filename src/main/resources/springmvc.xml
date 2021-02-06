@@ -21,7 +21,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
     </bean>
 
     <mvc:default-servlet-handler/>
-    <mvc:annotation-driven >
+    <mvc:annotation-driven  conversion-service="conversionService2">
        <mvc:message-converters register-defaults="true">
            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
                <property name="supportedMediaTypes">
@@ -32,6 +32,40 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
            </bean>
        </mvc:message-converters>
     </mvc:annotation-driven>
+    <bean id="conversionService2" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.cly.utils.DateConter"></bean>
+            </list>
+        </property>
+    </bean>
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+         <property name="defaultEncoding" value="utf-8"></property>
+        <property name="cacheSeconds" value="0"></property>
+        <property name="basename" value="i18n"></property>
+    </bean>
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/logins"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/x"/>
+            <bean class="com.cly.Interceptor.loginInterceptor"></bean>
+        </mvc:interceptor>
 
+            <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+
+    </mvc:interceptors>
+
+    <bean id="simpleMappingExceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="defaultErrorView" value="error"></property>
+   <property name="exceptionAttribute" value="exception"></property>
+        <property name="exceptionMappings">
+           <props>
+               <prop key="java.lang.Exception">error</prop>
+           </props>
+        </property>
+    </bean>
 
 </beans>
