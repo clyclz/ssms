@@ -10,4 +10,8 @@
     <select id="getAll" resultType="emp">
         select *from emp
     </select>
+
+    <select id="getByIdAndName" resultType="emp">
+        select *from emp where emp_id=#{emp_id} and emp_name=#{emp_name}
+    </select>
 </mapper>

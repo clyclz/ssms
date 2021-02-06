@@ -3,6 +3,7 @@ package com.cly.service;
 
 
 import com.cly.dao.EmpDao;
+import com.cly.pojo.Emp;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -26,5 +27,10 @@ public class EmpServiceImpl<Emp> implements EmpService {
     @Override
     public List<com.cly.pojo.Emp> getAll() throws IOException {
         return empDao.getAll();
+    }
+
+    @Override
+    public com.cly.pojo.Emp getByIdAndName(com.cly.pojo.Emp emp) {
+        return empDao.getByIdAndName(emp);
     }
 }
